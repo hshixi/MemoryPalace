@@ -1,0 +1,26 @@
+{
+  "name": "memorypalace-server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --watch src/index.ts",
+    "start": "node src/index.ts",
+    "test": "MP_EMBED=0 node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "eval:rag": "node scripts/eval-rag.ts",
+    "eval:rag:paraphrase": "node scripts/eval-rag.ts --queries eval/rag-paraphrase-queries.json"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "~7.0.2"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.2",
+    "mammoth": "^1.13.0",
+    "pdfjs-dist": "^6.5.438"
+  }
+}

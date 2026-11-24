@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/mark.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f2ed" />
+    <meta
+      name="description"
+      content="MemoryPalace — 用聊天找回你电脑里的文件。"
+    />
+    <title>MemoryPalace · 文件记忆助手</title>
+    <script>
+      try {
+        if (localStorage.getItem("mp-theme") === "dark") {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (e) {
+        /* 本地文件或隐私模式下 localStorage 可能不可用 */
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

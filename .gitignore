@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+server/.env
+server/data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.DS_Store
+
+# 示例工作区里故意保留的假 .env，用来演示敏感文件拦截
+!workspace-sample/私有/.env
